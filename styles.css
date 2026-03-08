@@ -69,6 +69,12 @@ form {
     font-weight: bold;
     line-height: 150%;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #063E34;
 }
 
 /* Div Styles */
@@ -99,6 +105,7 @@ form {
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 .checkbox-div {
@@ -111,6 +118,10 @@ form {
 /* Label Styles */
 .main-label {
     line-height: 150%;
+}
+
+.checkbox-div label {
+    cursor: pointer;
 }
 
 .star-span {
@@ -131,6 +142,11 @@ legend {
     line-height: 150%;
     font-family: inherit;
     color: var(--grey-900);
+    transition: border 0.2s ease;
+}
+
+.input-div input:hover, textarea:hover, .radio-div:hover {
+    border: 1px solid var(--green-600);
 }
 
 .radio-div input {
@@ -141,7 +157,6 @@ legend {
     opacity: 0.5;
     border: 1.8px solid var(--grey-500);
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .radio-div input:checked {
