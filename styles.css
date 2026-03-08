@@ -1,0 +1,24 @@
+/* Root */
+:root {
+    --grey-500: #86A2A5;
+    --grey-900: #2A4144;
+    --white: white;
+    --green-200: #E0F1E8;
+    --green-600: #0C7D69;
+    --red-error: #D73C3C;
+
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-1600: 128px;
+}
+
+/* General */
+body {
+    margin: 0;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
