@@ -17,14 +17,19 @@
 }
 
 /* General */
-body {
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     padding: var(--spacing-400) var(--spacing-200);
     font-family: "Karla", sans-serif;
     font-size: 16px;
+    color: var(--grey-900);
     background-color: var(--green-200);
     min-height: 100vh;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,8 +46,6 @@ main {
 }
 
 h1 {
-    margin: 0;
-    color: var(--grey-900);
     font-size: 32px;
     letter-spacing: -1px;
     line-height: 100%;
@@ -55,6 +58,19 @@ form {
     gap: var(--spacing-300);
 }
 
+#submit-btn {
+    background-color: var(--green-600);
+    padding: var(--spacing-200) var(--spacing-500);
+    border-radius: 8px;
+    font-family: inherit;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 150%;
+    border: none;
+}
+
+/* Div Styles */
 .input-div, .query-div, .textarea-div {
     display: flex;
     flex-direction: column;
@@ -64,15 +80,86 @@ form {
     margin-bottom: var(--spacing-200);
 }
 
+.input-div, .textarea-div {
+    gap: var(--spacing-100);
+}
+
 .query-div {
     border: none;
-    padding: 0;
-    margin: 0;
     gap: var(--spacing-200);
+}
+
+.radio-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .checkbox-div {
     display: flex;
+    align-items: center;
     gap: var(--spacing-200);
     padding-right: var(--spacing-200);
+}
+
+/* Label Styles */
+.main-label {
+    line-height: 150%;
+}
+
+.star-span {
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+legend {
+    margin-bottom: 16px;
+}
+
+/* Input Styles */
+.input-div input, textarea, .radio-div {
+    border: 1px solid var(--grey-500);
+    border-radius: 8px;
+    padding: 12px var(--spacing-300);
+    font-size: 18px;
+    line-height: 150%;
+    font-family: inherit;
+    color: var(--grey-900);
+}
+
+.radio-div input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 19.5px;
+    height: 19.5px;
+    opacity: 0.5;
+    border: 1.8px solid var(--grey-500);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.radio-div input:checked {
+    border: none;
+    opacity: 1;
+    background: url("./images/icon-radio-selected.svg") center/contain no-repeat;
+}
+
+textarea {
+    height: 240px;
+}
+
+.checkbox-div input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.6px solid var(--grey-500);
+    border-radius: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-div input:checked {
+    border: none;
+    background: url("./images/icon-checkbox-check.svg") center/contain no-repeat;
 }
