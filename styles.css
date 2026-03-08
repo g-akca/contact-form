@@ -83,16 +83,17 @@ form {
     flex-direction: column;
 }
 
-.textarea-div, .checkbox-div {
-    margin-bottom: var(--spacing-200);
-}
-
 .input-div, .textarea-div {
     gap: var(--spacing-100);
 }
 
+.textarea-div, .input-div:last-of-type {
+    margin-bottom: var(--spacing-200);
+}
+
 .query-div {
     border: none;
+    gap: var(--spacing-200);
 }
 
 .grid {
@@ -126,6 +127,7 @@ form {
     align-items: center;
     gap: var(--spacing-200);
     padding-right: var(--spacing-200);
+    width: fit-content;
 }
 
 /* Label Styles */
@@ -146,8 +148,13 @@ legend {
     margin-bottom: 16px;
 }
 
+.error-text {
+    color: var(--red-error);
+    line-height: 150%;
+}
+
 /* Input Styles */
-.input-div input, textarea {
+.input-div > input, textarea {
     border: 1px solid var(--grey-500);
     border-radius: 8px;
     padding: 12px var(--spacing-300);
@@ -158,10 +165,14 @@ legend {
     transition: border 0.3s ease;
 }
 
-.input-div input:hover, textarea:hover, .radio-div:hover,
-.input-div input:focus, textarea:focus {
+.input-div > input:hover, textarea:hover, .radio-div:hover,
+.input-div > input:focus, textarea:focus {
     border: 1px solid var(--green-600);
     outline: none;
+}
+
+.input-div > input.error, textarea.error {
+    border: 1px solid var(--red-error);
 }
 
 .radio-div input {
@@ -184,6 +195,7 @@ legend {
 
 textarea {
     height: 240px;
+    resize: none;
 }
 
 .checkbox-div input {
