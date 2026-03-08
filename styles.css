@@ -19,6 +19,60 @@
 /* General */
 body {
     margin: 0;
+    padding: var(--spacing-400) var(--spacing-200);
     font-family: "Karla", sans-serif;
     font-size: 16px;
+    background-color: var(--green-200);
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Section */
+main {
+    background-color: var(--white);
+    padding: var(--spacing-300);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+h1 {
+    margin: 0;
+    color: var(--grey-900);
+    font-size: 32px;
+    letter-spacing: -1px;
+    line-height: 100%;
+}
+
+/* Form Section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.input-div, .query-div, .textarea-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea-div, .checkbox-div {
+    margin-bottom: var(--spacing-200);
+}
+
+.query-div {
+    border: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--spacing-200);
+}
+
+.checkbox-div {
+    display: flex;
+    gap: var(--spacing-200);
+    padding-right: var(--spacing-200);
 }
