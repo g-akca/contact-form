@@ -52,8 +52,8 @@ h1 {
     line-height: 100%;
 }
 
-/* Success Message Div */
-#success-div {
+/* Success Toast */
+#success-toast {
     position: fixed;
     top: var(--spacing-300);
     margin: 0 var(--spacing-300);
@@ -61,6 +61,14 @@ h1 {
     border-radius: var(--spacing-150);
     padding: var(--spacing-300);
     color: var(--white);
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+}
+
+#success-toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #success-header {

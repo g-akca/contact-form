@@ -39,7 +39,7 @@ radios.forEach(radio => radio.addEventListener("change", () => {
     radios.forEach(r => r.setAttribute("aria-invalid", "false"));
 }));
 
-const successDiv = document.getElementById("success-div");
+const successToast = document.getElementById("success-toast");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -60,6 +60,11 @@ form.addEventListener("submit", (e) => {
     const errors = form.querySelectorAll("[aria-invalid='true']").length;
 
     if (errors == 0) {
-        successDiv.hidden = false;
+        successToast.hidden = false;
+        form.reset();
+        setTimeout(() => successToast.classList.add("show"), 1);
+
+        setTimeout(() => successToast.classList.remove("show"), 4000);
+        setTimeout(() => successToast.hidden = true, 4600);
     }
 });

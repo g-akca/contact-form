@@ -12,7 +12,7 @@
     <title>Contact Form</title>
   </head>
   <body>
-    <div id="success-div" hidden>
+    <div id="success-toast" aria-live="assertive" hidden>
       <div id="success-header">
         <img src="images/icon-success-check.svg">
         <p>Message Sent!</p>
@@ -29,20 +29,20 @@
           <div class="input-div">
             <label for="first-name" class="main-label">First Name <span class="star-span">*</span></label>
             <input type="text" id="first-name" name="first-name" aria-describedby="first-name-error" required>
-            <p id="first-name-error" class="error-text" hidden>This field is required</p>
+            <p id="first-name-error" class="error-text" aria-live="polite" hidden>This field is required</p>
           </div>
 
           <div class="input-div">
             <label for="last-name" class="main-label">Last Name <span class="star-span">*</span></label>
             <input type="text" id="last-name" name="last-name" aria-describedby="last-name-error" required>
-            <p id="last-name-error" class="error-text" hidden>This field is required</p>
+            <p id="last-name-error" class="error-text" aria-live="polite" hidden>This field is required</p>
           </div>
         </div>
 
         <div class="input-div">
           <label for="email" class="main-label">Email Address <span class="star-span">*</span></label>
           <input type="email" id="email" name="email" aria-describedby="email-error" required>
-          <p id="email-error" class="error-text" hidden>Please enter a valid email address</p>
+          <p id="email-error" class="error-text" aria-live="polite" hidden>Please enter a valid email address</p>
         </div>
 
         <fieldset class="query-div">
@@ -60,13 +60,13 @@
             </label>
           </div>
 
-          <p id="query-error" class="error-text" hidden>Please select a query type</p>
+          <p id="query-error" class="error-text" aria-live="polite" hidden>Please select a query type</p>
         </fieldset>
 
         <div class="textarea-div">
           <label for="message" class="main-label">Message <span class="star-span">*</span></label>
           <textarea id="message" name="message" aria-describedby="message-error" required></textarea>
-          <p id="message-error" class="error-text" hidden>This field is required</p>
+          <p id="message-error" class="error-text" aria-live="polite" hidden>This field is required</p>
         </div>
 
         <div class="input-div">
@@ -74,7 +74,7 @@
             <input type="checkbox" id="contact" name="contact" aria-describedby="contact-error" required>
             <label for="contact" class="main-label">I consent to being contacted by the team <span class="star-span">*</span></label>
           </div>
-          <p id="contact-error" class="error-text" hidden>To submit this form, please consent to being contacted</p>
+          <p id="contact-error" class="error-text" aria-live="polite" hidden>To submit this form, please consent to being contacted</p>
         </div>
 
         <button type="submit" id="submit-btn">Submit</button>
