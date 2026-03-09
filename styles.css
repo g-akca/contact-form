@@ -129,7 +129,7 @@ form {
     gap: var(--spacing-100);
 }
 
-.textarea-div, .input-div:last-of-type {
+.textarea-div, .last-div {
     margin-bottom: var(--spacing-200);
 }
 
