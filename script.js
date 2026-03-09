@@ -39,6 +39,8 @@ radios.forEach(radio => radio.addEventListener("change", () => {
     radios.forEach(r => r.setAttribute("aria-invalid", "false"));
 }));
 
+const successDiv = document.getElementById("success-div");
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -53,5 +55,11 @@ form.addEventListener("submit", (e) => {
     else {
         radioError.hidden = true;
         radios.forEach(radio => radio.setAttribute("aria-invalid", "false"));
+    }
+
+    const errors = form.querySelectorAll("[aria-invalid='true']").length;
+
+    if (errors == 0) {
+        successDiv.hidden = false;
     }
 });
