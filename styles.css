@@ -43,7 +43,7 @@ main {
     flex-direction: column;
     gap: var(--spacing-400);
     flex-grow: 1;
-    max-width: 480px;
+    max-width: 736px;
 }
 
 h1 {
@@ -257,13 +257,12 @@ textarea {
 }
 
 /* Tablet Responsive Styles */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 768px) {
     body {
         padding: var(--spacing-500);
     }
 
     main {
-        max-width: 690px;
         padding: var(--spacing-500);
     }
 
@@ -279,11 +278,7 @@ textarea {
 }
 
 /* Desktop Responsive Styles */
-@media screen and (min-width: 920px) {
-    main {
-        max-width: 736px;
-    }
-
+@media screen and (min-width: 1440px) {
     textarea {
         height: 105px;
     }
